@@ -32,9 +32,12 @@ function loadAllowedProperties() {
   ]);
 
   try {
-    const schemaPath = path.resolve(__dirname, "..", "schemas", "skill-frontmatter.schema.json");
-    // nosemgrep: gitlab.eslint.detect-non-literal-fs-filename
-    const schema = JSON.parse(fs.readFileSync(schemaPath, "utf8"));
+    const baseDir = path.resolve(__dirname, "..", "schemas");
+    const schemaPath = path.normalize(path.join(baseDir, "skill-frontmatter.schema.json"));
+    if (!schemaPath.startsWith(baseDir + path.sep)) {
+      throw new Error("Schema path escapes base directory");
+    }
+    const schema = JSON.parse(fs.readFileSync(schemaPath, "utf8")); // nosemgrep: gitlab.eslint.detect-non-literal-fs-filename
     if (schema && schema.properties && typeof schema.properties === "object") {
       return new Set(Object.keys(schema.properties));
     }
