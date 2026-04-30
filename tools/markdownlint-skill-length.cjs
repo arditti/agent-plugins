@@ -13,7 +13,7 @@
 
 const MAX_LINES = 500;
 const MAX_WORDS = 8000;
-const WARNING_LINES = 300;
+const WARNING_LINES = 350;
 const WARNING_WORDS = 5000;
 
 module.exports = {

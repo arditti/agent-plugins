@@ -70,7 +70,7 @@ python tools/evals/databases-on-aws/scripts/run_functional_evals.py \
 **What it checks** (3 eval prompts, 18 assertions total):
 
 | Eval                                | Focus               | Key assertions                                                                                                                   |
-|-------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 6. Cost estimation (us-east-1)      | Cost workflow       | Calls `awspricing` for regional pricing                                                                                          |
 | 7. Cost estimation (eu-west-1)      | Regional pricing    | Queries pricing for correct region, mentions EXPLAIN ANALYZE for accuracy, suggests high-TPS optimizations                       |
 | 8. Cost estimation (ap-northeast-1) | Pre-deployment flow | States assumptions clearly, provides cost breakdown with percentages, offers schema optimization help, doesn't re-ask for region |
