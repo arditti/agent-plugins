@@ -1,5 +1,5 @@
 ---
-name: aws-amplify
+name: aws-amplify-gen2
 description: 'Build and deploy full-stack web and mobile apps with AWS Amplify Gen2
   (TypeScript code-first). Covers auth (Cognito), data (AppSync/DynamoDB including
   schema modeling, enum types, relationships, authorization rules), storage (S3),

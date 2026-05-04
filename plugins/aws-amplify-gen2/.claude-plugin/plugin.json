@@ -15,7 +15,7 @@
     "functions"
   ],
   "license": "Apache-2.0",
-  "name": "aws-amplify",
+  "name": "aws-amplify-gen2",
   "repository": "https://github.com/awslabs/agent-plugins",
   "version": "1.0.0"
 }

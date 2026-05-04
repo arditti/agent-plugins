@@ -43,8 +43,8 @@
         "graphql",
         "functions"
       ],
-      "name": "aws-amplify",
-      "source": "./plugins/aws-amplify",
+      "name": "aws-amplify-gen2",
+      "source": "./plugins/aws-amplify-gen2",
       "tags": ["aws", "amplify", "fullstack"],
       "version": "1.0.0"
     },

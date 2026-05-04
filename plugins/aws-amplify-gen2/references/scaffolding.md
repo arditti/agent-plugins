@@ -166,6 +166,9 @@ Without it, the app fails to compile because
 # After npm install:
 npx ampx sandbox --once # generates amplify_outputs.json
 npm run dev # NOW the app can compile
+
+# Flutter requires the Dart output format (see core-mobile.md):
+npx ampx sandbox --once --outputs-format dart --outputs-out-dir lib
 ```
 
 `amplify_outputs.json` is gitignored — see [deployment.md](deployment.md) for generation details.

@@ -96,7 +96,7 @@ struct MyApp: App {
     init() {
         do {
             try Amplify.add(plugin: AWSCognitoAuthPlugin())
-            try Amplify.configure()
+            try Amplify.configure(with: .amplifyOutputs)
         } catch {
             print("Unable to configure Amplify \(error)")
         }
@@ -160,7 +160,7 @@ dependencies {
 ```kotlin
 try {
     Amplify.addPlugin(AWSCognitoAuthPlugin())
-    Amplify.configure(applicationContext)
+    Amplify.configure(AmplifyOutputs(R.raw.amplify_outputs), applicationContext)
 } catch (error: AmplifyException) {
     Log.e("MyApp", "Could not initialize Amplify", error)
 }
