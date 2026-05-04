@@ -54,7 +54,7 @@ call** (with parentheses). In storage access rules, `allow.guest` is a
 ```typescript
 a.model({ /* fields */ }).authorization(allow => [
   allow.publicApiKey().to(['read']), // API key: public read
-  allow.guest().to(['read']), // Requires defaultAuthorizationMode: 'iam' — NOTE: method call ()
+  allow.guest().to(['read']), // Requires defaultAuthorizationMode: 'iam'
   allow.owner(), // Creator has full CRUD
   allow.authenticated().to(['read']), // Any signed-in user can read
   allow.group('Admins'), // Named Cognito group

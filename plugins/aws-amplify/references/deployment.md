@@ -92,13 +92,13 @@ aws amplify create-branch --app-id "$APP_ID" --branch-name main
 Create `amplify.yml` in the project root. Set `baseDirectory` per
 framework:
 
-| Framework | baseDirectory |
-|-----------|---------------|
-| Vite (React/Vue) | `dist` |
-| CRA | `build` |
-| Next.js (export) | `out` |
-| Next.js (SSR) | `.next` |
-| Angular | `dist/<project-name>/browser` |
+| Framework        | baseDirectory                 |
+| ---------------- | ----------------------------- |
+| Vite (React/Vue) | `dist`                        |
+| CRA              | `build`                       |
+| Next.js (export) | `out`                         |
+| Next.js (SSR)    | `.next`                       |
+| Angular          | `dist/<project-name>/browser` |
 
 **Wrong `baseDirectory` = blank page in production** (silent failure).
 Always match the framework table above.

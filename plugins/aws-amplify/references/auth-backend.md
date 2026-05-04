@@ -182,7 +182,7 @@ import { defineFunction } from '@aws-amplify/backend';
 export const preSignUp = defineFunction({ name: 'pre-sign-up' });
 ```
 
-### Guest (Unauthenticated) Access
+## Guest (Unauthenticated) Access
 
 Guest access is **enabled by default** in Amplify Gen2 — the Cognito Identity Pool is created with `allowUnauthenticatedIdentities: true` automatically.
 

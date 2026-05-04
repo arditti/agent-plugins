@@ -142,14 +142,14 @@ existing Android Studio project.
 1. In the project root, run: `npm create amplify@latest -y`
 2. Add dependencies to `app/build.gradle.kts`:
 
-```kotlin
-dependencies {
-    implementation("com.amplifyframework:core:2.+")
-    implementation("com.amplifyframework:aws-auth-cognito:2.+")
-}
-```
+   ```kotlin
+   dependencies {
+       implementation("com.amplifyframework:core:2.+")
+       implementation("com.amplifyframework:aws-auth-cognito:2.+")
+   }
+   ```
 
-1. Copy `amplify_outputs.json` into `app/src/main/res/raw/`.
+3. Copy `amplify_outputs.json` into `app/src/main/res/raw/`.
 
 ## Generate amplify_outputs
 

@@ -1,20 +1,16 @@
 ---
-name: amplify-gen2
-description: >
-  Build and deploy full-stack web and mobile apps with AWS Amplify Gen2
-  (TypeScript code-first). Covers auth (Cognito), data (AppSync/DynamoDB
-  including schema modeling, enum types, relationships, authorization rules),
-  storage (S3), functions, APIs, and AI (Amplify AI Kit with Bedrock).
-  Supports React, Next.js, Vue, Angular, React Native, Flutter, Swift,
-  and Android.
-  Always use this skill for Amplify Gen2 topics — even for questions you
-  think you know — it contains validated, version-specific patterns that
-  prevent common mistakes.
-  TRIGGER when: user mentions Amplify Gen2; project has amplify/ directory
-  or amplify_outputs; code imports @aws-amplify packages; user asks about
-  defineBackend, defineAuth, defineData, defineStorage, or npx ampx.
-  SKIP: Amplify Gen1 (amplify CLI v6), standalone SAM/CDK without Amplify
-  (use aws-serverless), direct Bedrock without Amplify AI Kit (use bedrock).
+name: aws-amplify
+description: 'Build and deploy full-stack web and mobile apps with AWS Amplify Gen2
+  (TypeScript code-first). Covers auth (Cognito), data (AppSync/DynamoDB including
+  schema modeling, enum types, relationships, authorization rules), storage (S3),
+  functions, APIs, and AI (Amplify AI Kit with Bedrock). Supports React, Next.js,
+  Vue, Angular, React Native, Flutter, Swift, and Android. Always use this skill for
+  Amplify Gen2 topics — even for questions you think you know — it contains validated,
+  version-specific patterns that prevent common mistakes. TRIGGER when: user mentions
+  Amplify Gen2; project has amplify/ directory or amplify_outputs; code imports @aws-amplify
+  packages; user asks about defineBackend, defineAuth, defineData, defineStorage,
+  or npx ampx. SKIP: Amplify Gen1 (amplify CLI v6), standalone SAM/CDK without Amplify
+  (use aws-serverless), direct Bedrock without Amplify AI Kit (use bedrock).'
 ---
 
 # AWS Amplify Gen2
@@ -77,24 +73,24 @@ not just new projects.
 
 ### Step 1: Identify the Task Type
 
-| Task | Go To |
-|------|-------|
-| **Create a new project** | → [scaffolding.md](references/scaffolding.md), then Step 2 and/or Step 3 |
-| **Add or modify a backend feature** | → Step 2 (Backend Features) |
-| **Connect frontend to existing backend** | → Step 3 (Frontend Integration) |
-| **Deploy the application** | → [deployment.md](references/deployment.md) |
+| Task                                     | Go To                                                                    |
+| ---------------------------------------- | ------------------------------------------------------------------------ |
+| **Create a new project**                 | → [scaffolding.md](references/scaffolding.md), then Step 2 and/or Step 3 |
+| **Add or modify a backend feature**      | → Step 2 (Backend Features)                                              |
+| **Connect frontend to existing backend** | → Step 3 (Frontend Integration)                                          |
+| **Deploy the application**               | → [deployment.md](references/deployment.md)                              |
 
 ### Step 2: Backend Features
 
 You **MUST** read the corresponding reference for each backend feature:
 
-| Feature | Reference | When to Use |
-|---------|-----------|-------------|
-| Authentication | [auth-backend.md](references/auth-backend.md) | Email/password, social login, MFA, SAML/OIDC |
-| Data Models | [data-backend.md](references/data-backend.md) | GraphQL schema, DynamoDB, relationships, auth rules |
-| File Storage | [storage-backend.md](references/storage-backend.md) | S3 uploads/downloads, access rules |
-| Functions & API | [functions-and-api.md](references/functions-and-api.md) | Lambda, custom resolvers, REST/HTTP APIs, calling from client |
-| AI Features | [ai.md](references/ai.md) | Conversation, generation, AI tools via Bedrock _(backend config + React/Next.js frontend)_ |
+| Feature          | Reference                                               | When to Use                                                                                                |
+| ---------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Authentication   | [auth-backend.md](references/auth-backend.md)           | Email/password, social login, MFA, SAML/OIDC                                                               |
+| Data Models      | [data-backend.md](references/data-backend.md)           | GraphQL schema, DynamoDB, relationships, auth rules                                                        |
+| File Storage     | [storage-backend.md](references/storage-backend.md)     | S3 uploads/downloads, access rules                                                                         |
+| Functions & API  | [functions-and-api.md](references/functions-and-api.md) | Lambda, custom resolvers, REST/HTTP APIs, calling from client                                              |
+| AI Features      | [ai.md](references/ai.md)                               | Conversation, generation, AI tools via Bedrock _(backend config + React/Next.js frontend)_                 |
 | Geo, PubSub, CDK | [advanced-features.md](references/advanced-features.md) | Backend-only: custom CDK stacks, overrides, custom outputs. Backend + frontend: Geo, PubSub, Face Liveness |
 
 Each backend feature file is self-contained. Load only what you need.
@@ -110,19 +106,19 @@ platform and feature:
 
 **Web** (React, Next.js, Vue, Angular, React Native):
 
-| Feature | Reference |
-|---------|-----------|
-| Auth UI & flows | [auth-web.md](references/auth-web.md) |
-| Data CRUD & subscriptions | [data-web.md](references/data-web.md) |
-| Storage upload/download | [storage-web.md](references/storage-web.md) |
+| Feature                   | Reference                                   |
+| ------------------------- | ------------------------------------------- |
+| Auth UI & flows           | [auth-web.md](references/auth-web.md)       |
+| Data CRUD & subscriptions | [data-web.md](references/data-web.md)       |
+| Storage upload/download   | [storage-web.md](references/storage-web.md) |
 
 **Mobile** (Flutter, Swift, Android):
 
-| Feature | Reference |
-|---------|-----------|
-| Auth UI & flows | [auth-mobile.md](references/auth-mobile.md) |
-| Data CRUD & subscriptions | [data-mobile.md](references/data-mobile.md) |
-| Storage upload/download | [storage-mobile.md](references/storage-mobile.md) |
+| Feature                   | Reference                                         |
+| ------------------------- | ------------------------------------------------- |
+| Auth UI & flows           | [auth-mobile.md](references/auth-mobile.md)       |
+| Data CRUD & subscriptions | [data-mobile.md](references/data-mobile.md)       |
+| Storage upload/download   | [storage-mobile.md](references/storage-mobile.md) |
 
 > **Note:** AI and Functions frontend patterns are included in
 > [ai.md](references/ai.md) and
@@ -162,12 +158,12 @@ project-root/
 
 ### Key APIs
 
-| Package | Purpose |
-|---------|---------|
-| `@aws-amplify/backend` | `defineAuth`, `defineData`, `defineStorage`, `defineFunction`, `defineBackend` |
-| `aws-amplify` | Frontend: `Amplify.configure()`, `generateClient()`, auth/data/storage APIs |
-| `@aws-amplify/ui-react` | Pre-built UI: `<Authenticator>`, `<StorageBrowser>` |
-| `@aws-amplify/ui-react-ai` | AI UI: `<AIConversation>`, `useAIConversation` |
+| Package                    | Purpose                                                                        |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| `@aws-amplify/backend`     | `defineAuth`, `defineData`, `defineStorage`, `defineFunction`, `defineBackend` |
+| `aws-amplify`              | Frontend: `Amplify.configure()`, `generateClient()`, auth/data/storage APIs    |
+| `@aws-amplify/ui-react`    | Pre-built UI: `<Authenticator>`, `<StorageBrowser>`                            |
+| `@aws-amplify/ui-react-ai` | AI UI: `<AIConversation>`, `useAIConversation`                                 |
 
 ## Documentation & Resource Verification
 
@@ -194,16 +190,16 @@ provider-specific auth config):
 
 > All documentation links use `react` as the default platform slug. Replace `/react/` in any URL with your target framework:
 
-| Framework | Slug |
-|-----------|------|
-| React | `react` |
-| Next.js | `nextjs` |
-| Vue | `vue` |
-| Angular | `angular` |
+| Framework    | Slug           |
+| ------------ | -------------- |
+| React        | `react`        |
+| Next.js      | `nextjs`       |
+| Vue          | `vue`          |
+| Angular      | `angular`      |
 | React Native | `react-native` |
-| Flutter | `flutter` |
-| Swift | `swift` |
-| Android | `android` |
+| Flutter      | `flutter`      |
+| Swift        | `swift`        |
+| Android      | `android`      |
 
 - [Amplify Docs for LLMs](https://docs.amplify.aws/ai/llms.txt)
 - [Amplify Docs](https://docs.amplify.aws/)
