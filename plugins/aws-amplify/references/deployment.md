@@ -182,6 +182,8 @@ aws amplify update-app --app-id "$APP_ID" \
 > (sandbox) or `npx ampx secret set --branch` (production) which stores in
 > SSM SecureString.
 
+> **Note:** Under the hood, Amplify Gen2 `secret()` references are backed by AWS Systems Manager Parameter Store (SecureString parameters). Review access policies on the `/amplify/` parameter path in your account to ensure only authorized roles can read production secrets.
+
 Reference secrets in functions using `secret()` — see
 [functions-and-api.md](functions-and-api.md) for the pattern.
 

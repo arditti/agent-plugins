@@ -62,7 +62,7 @@ a.model({ /* fields */ }).authorization(allow => [
 ])
 ```
 
-> **Security note:** `allow.guest()` permits unauthenticated access. Only use for intentionally public, non-sensitive data. Prefer `allow.authenticated()` or `allow.owner()` for sensitive resources.
+> **Security note:** `allow.guest()` permits unauthenticated access. Only use for intentionally public, non-sensitive data. Prefer `allow.authenticated()` or `allow.owner()` for sensitive resources. See [Amplify authorization best practices](https://docs.amplify.aws/react/build-a-backend/data/customize-authz/) and [Amazon Cognito Identity Pool security](https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html) for guidance on choosing the right authorization strategy.
 
 Per-field authorization overrides model-level rules:
 

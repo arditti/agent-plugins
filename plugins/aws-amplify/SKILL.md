@@ -185,6 +185,10 @@ provider-specific auth config):
 - Review `allow.guest()` exposure carefully — guest access is enabled by default and grants unauthenticated users access to IAM-authorized resources
 - Scope IAM policies to specific resource ARNs — avoid `resources: ['*']` in production
 - Never log secrets or include them in error messages
+- Enable CloudTrail and CloudWatch alarms for monitoring Amplify-deployed resources; enable access logging on S3, AppSync, and API Gateway
+- Configure security headers for web apps — set CSP, HSTS, X-Frame-Options, and X-Content-Type-Options via `customHeaders` in `amplify.yml`
+- Attach AWS WAF to public-facing AppSync APIs and API Gateway endpoints for defense in depth
+- Enable throttling and rate limiting on API Gateway and AppSync APIs to prevent abuse
 
 ## Links
 

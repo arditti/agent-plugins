@@ -16,7 +16,7 @@ All imports from `'aws-amplify/storage'`.
 | Remove        | `await remove({ path })`                                  |
 | Copy          | `await copy({ source: { path }, destination: { path } })` |
 
-> **Security:** Amplify Gen2 enables S3 server-side encryption (SSE-S3) by default. For sensitive data, consider configuring SSE-KMS with a customer-managed key via CDK overrides.
+> **Security:** Amplify Gen2 enables S3 server-side encryption (SSE-S3) by default. For sensitive data, consider configuring SSE-KMS with a customer-managed key via CDK overrides. Amplify also enforces HTTPS-only access to S3 buckets by default; if using custom bucket configurations, add a bucket policy with `"aws:SecureTransport": "false"` → Deny to ensure encryption in transit.
 
 `uploadData` returns a control object: `.pause()`, `.resume()`, `.cancel()`, `.result` (Promise). Progress: `options.onProgress: ({ transferredBytes, totalBytes }) => …`.
 
