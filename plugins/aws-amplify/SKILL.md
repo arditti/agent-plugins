@@ -189,6 +189,10 @@ provider-specific auth config):
 - Configure security headers for web apps — set CSP, HSTS, X-Frame-Options, and X-Content-Type-Options via `customHeaders` in `amplify.yml`
 - Attach AWS WAF to public-facing AppSync APIs and API Gateway endpoints for defense in depth
 - Enable throttling and rate limiting on API Gateway and AppSync APIs to prevent abuse
+- Use IAM roles with ephemeral credentials for CI/CD pipelines and Lambda execution roles — never long-lived access keys
+- Encrypt CloudWatch Logs groups with KMS (aws:kms) when they may contain PII, tokens, or secrets; enable log retention policies
+- Enable AppSync schema validation and API Gateway request validators to reject malformed input at the edge
+- Use ACM-managed TLS certificates for custom domains on Amplify Hosting — configure via `customDomain` in deployment config
 
 ## Links
 
