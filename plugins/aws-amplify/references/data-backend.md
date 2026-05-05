@@ -62,6 +62,8 @@ a.model({ /* fields */ }).authorization(allow => [
 ])
 ```
 
+> **Security note:** `allow.guest()` permits unauthenticated access. Only use for intentionally public, non-sensitive data. Prefer `allow.authenticated()` or `allow.owner()` for sensitive resources.
+
 Per-field authorization overrides model-level rules:
 
 ```typescript
