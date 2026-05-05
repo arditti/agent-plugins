@@ -15,6 +15,8 @@ Imports: `amplify_flutter` + `amplify_storage_s3`. All paths wrapped with `Stora
 | Presigned URL | `Amplify.Storage.getUrl(path: const StoragePath.fromString('public/file.jpg'))`                                         |
 | Remove        | `Amplify.Storage.remove(path: const StoragePath.fromString('public/file.jpg'))`                                         |
 
+> **Security:** Amplify Gen2 enables S3 server-side encryption (SSE-S3) by default. All transfers use HTTPS (TLS in transit). For sensitive data, configure SSE-KMS with a customer-managed key via CDK overrides.
+
 Upload progress — use the `onProgress` callback parameter:
 
 ```dart

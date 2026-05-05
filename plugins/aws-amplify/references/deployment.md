@@ -156,11 +156,10 @@ aws amplify start-job --app-id "$APP_ID" --branch-name main --job-type RELEASE
 **Sandbox:** Set secrets via CLI:
 
 ```bash
-echo "<value>" | npx ampx sandbox secret set MY_API_KEY
+npx ampx sandbox secret set MY_API_KEY
 ```
 
-You **MUST** pipe the value via stdin — without the pipe, the command
-prompts interactively.
+> **Security:** Avoid passing secret values as CLI arguments or via `echo` — these appear in shell history and `/proc`. Instead, use `ampx sandbox secret set MY_SECRET` which prompts for input interactively, or pipe from a secure source: `aws ssm get-parameter --name /path/to/secret --with-decryption --query Parameter.Value --output text | ampx sandbox secret set MY_SECRET --from-stdin`
 
 This stores the secret for your personal sandbox environment.
 **Branch environments (production):** Set secrets via the `ampx` CLI:
@@ -181,7 +180,7 @@ aws amplify update-app --app-id "$APP_ID" \
 > For sensitive values (API keys, tokens), use `npx ampx sandbox secret set`
 > (sandbox) or `npx ampx secret set --branch` (production) which stores in
 > SSM SecureString.
-
+>
 > **Note:** Under the hood, Amplify Gen2 `secret()` references are backed by AWS Systems Manager Parameter Store (SecureString parameters). Review access policies on the `/amplify/` parameter path in your account to ensure only authorized roles can read production secrets.
 
 Reference secrets in functions using `secret()` — see
