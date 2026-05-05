@@ -1,5 +1,5 @@
 {
-  "name": "aws-amplify-gen2",
+  "name": "aws-amplify",
   "version": "1.0.0",
   "description": "Build full-stack apps with AWS Amplify Gen 2 using guided workflows for authentication, data models, storage, GraphQL APIs, and Lambda functions.",
   "author": {

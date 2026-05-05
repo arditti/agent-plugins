@@ -17,10 +17,10 @@
       "category": "Location"
     },
     {
-      "name": "aws-amplify-gen2",
+      "name": "aws-amplify",
       "source": {
         "source": "local",
-        "path": "./plugins/aws-amplify-gen2"
+        "path": "./plugins/aws-amplify"
       },
       "policy": {
         "installation": "AVAILABLE",
