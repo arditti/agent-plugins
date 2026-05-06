@@ -48,8 +48,8 @@ When the user does not specify tooling or strategy:
   specifies Pages Router.
 - **React Native:** Ask the user whether they use **Expo** or **bare
   React Native CLI**.
-- **Auth:** You **SHOULD** default to **email/password** as the login method
-  unless the user specifies social login, SAML, or another provider.
+- **Auth:** You **MUST** ask which login method the user wants
+  (email/password, social login, SAML, passwordless, etc.). Do not assume a default.
 - **Data authorization:** default to **`publicApiKey`**
   (`allow.publicApiKey()`) — this is the starter template default. When
   auth is added, switch to **owner-based** (`allow.owner()`) with
