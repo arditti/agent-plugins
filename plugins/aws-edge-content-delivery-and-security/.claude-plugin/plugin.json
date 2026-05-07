@@ -1,0 +1,24 @@
+{
+  "author": {
+    "name": "Amazon Web Services"
+  },
+  "description": "Design, build, deploy, and operate Amazon CloudFront distributions and AWS WAF web ACLs for secure content delivery at the edge.",
+  "homepage": "https://github.com/awslabs/agent-plugins",
+  "keywords": [
+    "aws",
+    "cloudfront",
+    "waf",
+    "cdn",
+    "edge",
+    "content-delivery",
+    "security",
+    "bot-control",
+    "ddos",
+    "caching",
+    "lambda-at-edge"
+  ],
+  "license": "Apache-2.0",
+  "name": "aws-edge-content-delivery-and-security",
+  "repository": "https://github.com/awslabs/agent-plugins",
+  "version": "1.0.0"
+}

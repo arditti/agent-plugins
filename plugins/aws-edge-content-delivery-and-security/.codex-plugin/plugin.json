@@ -1,0 +1,48 @@
+{
+  "name": "aws-edge-content-delivery-and-security",
+  "version": "1.0.0",
+  "description": "Design, build, deploy, and operate Amazon CloudFront distributions and AWS WAF web ACLs for secure content delivery at the edge.",
+  "author": {
+    "name": "Amazon Web Services",
+    "email": "aws-agent-plugins@amazon.com",
+    "url": "https://github.com/awslabs/agent-plugins"
+  },
+  "homepage": "https://github.com/awslabs/agent-plugins",
+  "repository": "https://github.com/awslabs/agent-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "aws",
+    "cloudfront",
+    "waf",
+    "cdn",
+    "edge",
+    "content-delivery",
+    "security",
+    "bot-control",
+    "ddos",
+    "caching",
+    "lambda-at-edge"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AWS Edge Content Delivery and Security",
+    "shortDescription": "Build CloudFront CDN and WAF protection for production workloads.",
+    "longDescription": "AWS edge expertise for Amazon CloudFront (distributions, caching, origins, edge functions, mTLS, signed URLs, flat-rate pricing) and AWS WAF (managed rules, custom rules, bot control, rate limiting, L7 DDoS resilience) with production-ready CDK patterns and opinionated guidance.",
+    "defaultPrompt": [
+      "Add CloudFront in front of my ALB with proper origin protection.",
+      "Write a baseline WAF web ACL for my API Gateway.",
+      "Debug why my CloudFront cache hit ratio is low."
+    ],
+    "developerName": "Amazon Web Services",
+    "category": "Security",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/awslabs/agent-plugins",
+    "privacyPolicyURL": "https://aws.amazon.com/privacy/",
+    "termsOfServiceURL": "https://aws.amazon.com/service-terms/",
+    "brandColor": "#FF9900"
+  }
+}
